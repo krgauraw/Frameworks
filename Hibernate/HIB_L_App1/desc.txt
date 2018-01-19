@@ -1,0 +1,11 @@
+HIB_L_App1: 
+
+Concept Covered:
+				1. Simple Demonstration of Hibernate Framework 
+				2. hbm mapping is used.
+				
+				Pojo Class Name : Person
+				Impl Class Name: PersonImpl
+				hibernate mapping file Name: Person.hbm.xml
+				hibernate Configuration file name: hibernate.cfg.xml
+
