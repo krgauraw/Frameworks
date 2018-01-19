@@ -10,6 +10,8 @@
 	<properties>
 		<Hibernate.version>4.2.21.Final</Hibernate.version>
 		<Oracle.version>11.2.0</Oracle.version>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.7</maven.compiler.source>
 	</properties>
 	<dependencies>
 		<!-- Hibernate Dependecy -->
@@ -25,5 +27,21 @@
 			<version>${Oracle.version}</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.3.2</version>
+					<configuration>
+						<source>${maven.compiler.source}</source>
+						<target>${maven.compiler.target}</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 
 </project>

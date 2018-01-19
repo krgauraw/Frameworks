@@ -1,0 +1,3 @@
+HIB_L_App2:
+	
+		Simple demonstration of Hibernate Framework using hbm mapping 

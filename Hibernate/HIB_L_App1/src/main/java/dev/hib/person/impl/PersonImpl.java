@@ -7,13 +7,12 @@ import org.hibernate.cfg.Configuration;
 import dev.hib.person.pojo.Person;
 
 public class PersonImpl {
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
-
 		Person p1 = new Person();
 		p1.setfName("Kumar");
 		p1.setlName("Gauraw");
 		p1.setAge(24);
-
 		Configuration c1 = new Configuration();
 		c1.configure();
 		SessionFactory sf = c1.buildSessionFactory();
