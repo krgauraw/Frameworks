@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>dev.demo.hibernate</groupId>
+	<artifactId>HIB_L_App2</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>HIB_L_App2</name>
+	<description>Hibernate Demo Project - App2</description>
+	<properties>
+		<Hibernate.version>4.2.21.Final</Hibernate.version>
+		<Oracle.version>11.2.0</Oracle.version>
+	</properties>
+	<dependencies>
+		<!-- Hibernate Dependecy -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${Hibernate.version}</version>
+		</dependency>
+		<!-- Oracle Dependency -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>${Oracle.version}</version>
+		</dependency>
+	</dependencies>
+</project>
