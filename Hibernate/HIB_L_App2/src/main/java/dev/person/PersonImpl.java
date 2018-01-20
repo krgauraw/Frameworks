@@ -18,7 +18,7 @@ public class PersonImpl {
 		p1.setAge(24);
 
 		Configuration c1 = new Configuration();
-		c1.configure();
+		c1.configure("app-config.xml");
 		SessionFactory sf = c1.buildSessionFactory();
 		Session s1 = sf.openSession();
 		s1.beginTransaction();
