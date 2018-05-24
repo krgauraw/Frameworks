@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+<!-- bean is registered to execute CustomBeanProcessor code after every bean instantiation.
+	 It will execute for every bean instantiation irrespective of Bean Type.
+	 It don't require any bean specific configuration -->
+<!-- 	 For Single Bean Post Processor demo, CustomBeanProcessor1 & CustomBeanProcessor1 need to be commented -->
+<!-- 	<bean class="dev.spring.core.util.CustomBeanProcessor"></bean> -->
+
+<!-- CustomBeanProcessor1 & CustomBeanProcessor2 bean need to be registered for Multiple Post Processor demo -->
+<!-- For Multiple Post Processor demo CustomBeanProcessor need to be commented and below beans should be uncommented -->
+	<bean class="dev.spring.core.util.CustomBeanProcessor1"></bean>
+	<bean class="dev.spring.core.util.CustomBeanProcessor2"></bean>
+	
+    <bean id="e1" class="dev.spring.core.bean.Employee" lazy-init="true">
+    	<property name="empId" value="101"></property>
+    	<property name="empName" value="Gauraw"></property>
+    </bean>
+    
+    <bean id="e2" class="dev.spring.core.bean.Employee" lazy-init="true">
+    	<property name="empId" value="102"></property>
+    	<property name="empName" value="Vikash"></property>
+    </bean>
+    
+    <bean id="p1" class="dev.spring.core.bean.Person" lazy-init="true">
+    	<property name="pid" value="103"></property>
+    	<property name="pName" value="Vikash Kumar"></property>
+    </bean>
+    
+    
+    
+</beans>

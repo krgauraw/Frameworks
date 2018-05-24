@@ -1,0 +1,31 @@
+IOC_GS_App7: 
+
+BeanPostProcessor:
+
+	1. BeanPostProcessor is an interface which allows programmer to modify a bean instance or any task once bean 
+	   instantiation is done.
+	2. If we will put some piece of code inside BeanPostProcessor, Spring framework will execute the code after
+	   every bean instantiation.
+	3. In order to achieve this, we need to perform following steps:
+	
+		i>  write a custom java class and implements BeanPostProcessor
+		ii> Implement 2 methods provided by BeanPostProcessor (postProcessBeforeInitialization & postProcessAfterInitialization)
+		iii> Provide entry for custom class in Spring Configuration file as below:
+		<bean class="dev.spring.core.util.CustomBeanProcessor"/>
+
+Note:
+
+	1. We can use BeanPostProcessor for very specific requirements like getting data from from remote location, 
+	   reading data from JMS queue or whatever, modifying property of instance.
+	2. It is used to override the definition of bean provided in spring configuration file.
+	
+	3. We can write any no of BeanPostProcessor class and we can provide the order of execution.
+	4. In order to provide order of execution, we need to implement one more interface Ordered and need to provide 
+	   value under getOrder(). Here Lower the value, higher the priority.
+	   
+Execution Order:
+
+	1. For Single post processor, CustomBeanProcessor1 & CustomBeanProcessor2 bean declarations should be 
+	   commented and CustomBeanProcessor should be uncommented inside app-config.xml.
+	2. For Multiple Post Processor demo, CustomBeanProcessor bean declaration should be commented 
+	   and CustomBeanProcessor1 & CustomBeanProcessor2 should be uncommented inside app-config.xml

@@ -1,0 +1,7 @@
+IOC_G_App3:	How to configure bean object specific init and destroy method?
+
+	Concept Covered:
+		1. Bean Life Cycle Methods Demonstration.
+		2. In this Project, a init and destroy method has been defined inside Employee Bean Class and configured
+		   with bean id "e1" inside app-config.xml. So these methods will execute for bean "e1" only. 
+		3. Three is no methods configured for bean "e2". So no init and destroy method will execute for "e2".

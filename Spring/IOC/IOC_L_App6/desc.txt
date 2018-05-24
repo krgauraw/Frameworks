@@ -1,0 +1,13 @@
+IOC_L_App6:
+
+Concept Covered:
+	Wiring: Wiring is of two type:
+		1.Explicit Wiring : Covered in App5
+		2.Auto Wiring :
+		
+		Auto Wiring Attributes:
+		
+			1. no : no need of demonstration because it is by default. So in this case explicit wiring is required.
+			2. byType : app-config.xml, Employee.java, Address.java, EmployeeImpl1.java
+			3. byName : app-config2.xml, Employee.java,Employee1.java, Address.java, EmployeeImpl2.java
+			4. constructor app-config3.xml, Person.java, Address.java, PersonImpl.java

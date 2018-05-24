@@ -1,0 +1,6 @@
+IOC_GS_App5: Bean  Life Cycle using @PostConstruct & @PreDestroy Annotations
+
+	Changes done in :
+		1. pom.xml
+		2. app-config.xml
+		3. Employee.java 

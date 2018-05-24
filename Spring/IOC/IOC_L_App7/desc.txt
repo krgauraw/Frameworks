@@ -1,0 +1,6 @@
+IOC_L_App7:
+
+Concept Covered:
+	Remove bean object from container:
+		1. Remove every bean object from container . EmployeeImpl1.java
+		2. Remove single bean object from container. EmployeeImpl2.java

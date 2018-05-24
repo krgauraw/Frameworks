@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- init method and destroy method can have any name. Here an init method and destroy method has been 
+		 configured for bean "e1"  -->
+    <bean id="e1" class="dev.spring.core.bean.Employee" init-method="init" destroy-method="destroy">
+    	<property name="empId" value="101"></property>
+    	<property name="empName" value="Gauraw"></property>
+    </bean>
+    
+<!--     No init and destroy method is configured for this bean "e2" -->
+     <bean id="e2" class="dev.spring.core.bean.Employee">
+    	<property name="empId" value="102"></property>
+    	<property name="empName" value="Vikas"></property>
+    </bean>
+
+</beans>

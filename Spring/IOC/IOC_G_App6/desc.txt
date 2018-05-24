@@ -1,0 +1,5 @@
+IOC_GS_App6: Bean Life Cycle using InitializingBean and DisposableBean interface.
+
+See: 
+
+	1. Employee bean class

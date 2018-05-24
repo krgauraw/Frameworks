@@ -1,0 +1,42 @@
+IOC_L_App8:
+
+	Annotation based Configuration.
+	
+	Annotation & Demo Sequence:
+	
+		===============|=============================================================================================================
+		Annotation     |	Files
+		===============|=============================================================================================================
+		@Required	   | app-config.xml (welcome bean), Welcome.java, WelcomeImpl.java (main class)
+		===============|=============================================================================================================
+		@Autowired     | app-config.xml (emp1 & address1 bean), Employee.java, Address.java, EmployeeDemoImpl.java (main class)
+					   | (uses of @Autowired on setter)
+		===============|=============================================================================================================
+		@Autowired	   |app-config.xml (person & address1 bean), Person.java, Address.java, PersonDemoImpl.java (main class)
+					   | (uses of @Autowired on properties)
+		===============|=============================================================================================================
+		@Autowired	   |app-config.xml (student & address1 bean), Student.java, Address.java, StudentDemoImpl.java (main class)
+					   | (uses of @Autowired on constructor)
+		===============|=============================================================================================================
+		@PostConstruct |app-config.xml ( greet bean), Greet.java, GreetDemoImpl.java (main class)
+		& @PreDestroy  |
+		===============|=============================================================================================================
+
+		Note:
+		
+		1. By default, he @Autowired annotation implies the dependency is required similar to @Required annotation, however, we can 
+		   turn off the default behavior by using the (required=false) option with @Autowired. e.g: @Autowired(required=false)
+		
+		2. @Qualifier annotation along with @Autowired can be used to remove the confusion by specifying which exact bean will be wired.
+		   e.g: 
+		   		@Autowired
+   				@Qualifier("address1")
+   				private Address address;
+   				
+   		3. @Resource annotation from JSR-250 works similar to auto-wire "by-name". It takes the name of bean and will be used with setter
+   		   method.
+   		   e.g:
+   		   		@Resource(name="address1")
+   		   		public void setEmpAddress(Address empAddress) {
+					this.empAddress = empAddress;
+				}

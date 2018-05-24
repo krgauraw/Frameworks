@@ -1,0 +1,5 @@
+IOC_GS_App4: How to configure default init and destroy method, so that it will be applicable to all bean object?
+
+	Concept Covered:
+		1. Bean Life Cycle Methods Demonstration. (deafult init and destroy methods)
+		2. Detailed Comment is given in app-config.xml file

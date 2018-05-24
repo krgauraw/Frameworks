@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd"
+        default-init-method="init"
+        default-destroy-method="destroy">
+		<!-- default init and destroy method is configured above-->
+
+    <bean id="e1" class="dev.spring.core.bean.Employee">
+    	<property name="empId" value="101"></property>
+    	<property name="empName" value="Gauraw"></property>
+    </bean>
+    
+    <bean id="e2" class="dev.spring.core.bean.Employee" lazy-init="true">
+    	<property name="empId" value="102"></property>
+    	<property name="empName" value="Vikash"></property>
+    </bean>
+    
+	<!--     
+	when we configure default init and destroy method with beans tag, following scenario can happen:
+ 		
+ 		1. If init and destroy methods are present in bean class then methods will execute for every bean 
+ 		object of that type. e.g: If methods are Present in Employee bean class then it will be applicable 
+ 		to every bean object of Employee bean but not for Student Bean.
+ 		
+ 		2. If init and destroy methods are not Present in bean class then it will not execute for object 
+ 		   of that bean type. e.g: If methods are not present in Student class then it will not execute for
+ 		   Student bean class object. It will not give any exception.
+ 	  -->
+ 	  
+    <bean id="s1" class="dev.spring.core.bean.Student">
+    	<property name="sid" value="100"></property>
+    	<property name="sName" value="Ravi"></property>
+    </bean>
+
+</beans>

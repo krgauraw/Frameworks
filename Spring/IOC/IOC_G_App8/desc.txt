@@ -1,0 +1,23 @@
+IOC_GS_App8:
+
+BeanFactoryPostProcessor:
+
+	1. A BeanFactoryPostProcessor allows programmer to change the bean definitions provided in spring configuration
+	   file before spring container instantiate the bean.
+	2. We can provide all bean changes in a java file using BeanFactoryPostProcessor and Spring Container will 
+	   override and apply all changes on top of existing bean configuration present in xml configuration file 
+	   before instantiating any bean.
+	   
+Steps:
+
+	1. Create a java file and implement BeanFactoryPostProcessor interface.
+	2. Provide code to perform changes.
+	3. Register custom java class as bean inside spring configuration file.
+	
+In this Project, overriding bean "e1" values inside CustomBeanProcessor.
+
+Note:
+
+	1. We can have multiple custom bean post processor. For that, we need to provide entry in spring configuration
+	   file. Order of execution can be controlled by implementing Ordered interface.
+	

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="w1_s" class="dev.spring.core.Welcome" scope="singleton">
+		<property name="welcomeMsg" value="Hello! I am here to welcome you..."></property>
+	</bean>
+
+	<bean id="w2_s" class="dev.spring.core.Welcome" scope="singleton"
+		lazy-init="true">
+		<property name="welcomeMsg" value="Hello! I am here to welcome you..."></property>
+	</bean>
+
+	<bean id="w3_p" class="dev.spring.core.Welcome" scope="prototype">
+		<property name="welcomeMsg" value="Hello! I am here to welcome you..."></property>
+	</bean>
+</beans>

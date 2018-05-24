@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- services -->
+
+    <bean id="empDetails" class="dev.spring.core.Employee">	<!-- by default scope of bean object will be singleton -->
+    
+		<!-- int type -->
+        <property name="empId" value="000101"/>
+        
+        <!-- String type -->
+        <property name="empName" value="Ankit Kumar"/>
+        
+        <!-- Derived Data type -->
+        <property name="empAdd" ref="a1"/>
+        
+<!--         Property type -->
+        <property name="project">
+        	<props>
+        	<prop key="name">HRMS</prop>
+        	<prop key="duration">6 Months</prop>
+        	<prop key="client">XYZ Pvt Ltd</prop>
+<!--         		<prop key="name" value="HRMS"/> -->
+<!--         		<prop key="duration" value="6 Months"/> -->
+<!--         		<prop key="client" value="XYZ Pvt Ltd"/> -->
+        	</props>
+        </property>
+        
+    </bean>
+    
+   <bean id="a1" class="dev.spring.core.Address">
+   	<property name="line1" value="BTM"></property>
+   	<property name="line2" value="Bangalore"></property>
+   	<property name="line3" value="Karnatka"></property>
+   </bean>
+
+</beans>

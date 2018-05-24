@@ -1,0 +1,14 @@
+IOC_G_App2: Lazy Loading or Pre Loading of Bean. (L11)
+
+Pre Loading: 
+
+	ApplicationContext loads all bean having singleton scope at server startup time whereas BeanFactory load beans
+	on request only (always lazy loading).
+	For beans having prototype scope, ApplicationContext & BeanFactory both works same. beans will be loaded upon request
+	only.
+
+Lazy Loading:
+
+	In ApplicationContext, we can configure lazy loading for beans having singleton scope by providing 
+	one attribute lazy-init="true" in bean definition.
+	BeanFactory support for Lazy Loading by default. So no question for configuring lazy loading property. 

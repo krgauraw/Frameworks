@@ -1,0 +1,9 @@
+IOC_L_App4:
+
+Concept Covered:
+	Setting data in different ways for bean object:
+		1.Single data (int/char/String)
+		2.Array Type
+		3.List Type
+		4.Set Type
+		5.Map type

@@ -1,0 +1,87 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+	<!-- services -->
+	<bean id="studentDetails" class="dev.spring.core.Student">
+		<!-- by default scope of bean object will be singleton -->
+		
+		<!-- int type -->
+		<property name="studentId" value="000101" />
+		
+		<!-- String type -->
+		<property name="studentName" value="Ankit Kumar" />
+		
+		<!-- char type -->
+		<property name="gender" value="M" />
+		
+		<!-- Array type -->
+		<property name="skills">
+			<array>
+				<value>"C"</value>
+				<value>"C++"</value>
+				<value>"Java"</value>
+				<value>"Spring Framework"</value>
+			</array>
+		</property>
+		
+		<!-- List type -->
+		<!-- <property name="education">
+			<list>
+				<value>"10th"</value>
+				<value>"12th"</value>
+				<value>"B.TECH"</value>
+				<value>"M.TECH"</value>
+			</list>
+		</property> -->
+		
+		
+		<!-- List type - Another way-->
+		<property name="education">
+		<util:list list-class="java.util.ArrayList">
+			<value>"10th"</value>
+			<value>"12th"</value>
+			<value>"B.TECH"</value>
+			<value>"M.TECH"</value>
+		</util:list>
+		</property>
+		
+		<!-- Set type -->
+		<!-- <property name="projects">
+			<set>
+				<value>"Library Management System"</value>
+				<value>"Airline Reservation System"</value>
+				<value>"Finacle E-Banking"</value>
+			</set>
+		</property> -->
+		
+		<!-- Set type - Another way-->
+		<property name="projects">
+			<util:set set-class="java.util.HashSet">
+				<value>"Library Management System"</value>
+				<value>"Airline Reservation System"</value>
+				<value>"Finacle E-Banking"</value>
+			</util:set>
+		</property>
+		
+		<!-- Map type -->
+		<!-- <property name="subjectWithMarks">
+			<map>
+				<entry key="C" value="50" />
+				<entry key="C++" value="70" />
+				<entry key="Java" value="95" />
+				<entry key="Spring" value="80" />
+			</map>
+		</property> -->
+		
+		<!-- Map type - Another way-->
+		<property name="subjectWithMarks">
+			<util:map map-class="java.util.HashMap">
+				<entry key="C" value="50" />
+				<entry key="C++" value="70" />
+				<entry key="Java" value="95" />
+				<entry key="Spring" value="80" />
+			</util:map>
+		</property>
+	</bean>
+</beans>

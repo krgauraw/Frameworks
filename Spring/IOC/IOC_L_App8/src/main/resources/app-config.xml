@@ -1,0 +1,71 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	<!-- Enable Annotation based Configuration -->
+	<context:annotation-config />
+
+	<!-- Definition for welcome bean -->
+	<bean id="welcome" class="dev.spring.demo.required.model.Welcome">
+	<!-- try without passing msg and check the result -->
+		<property name="msg" value="Hello World!" />
+	</bean>
+	
+	<!-- uses of @Autowired on setter - start -->
+	
+	<!-- Definition for Employee Bean -->
+	<bean id="emp1" class="dev.spring.demo.autowired.model.Employee">
+		<property name="empId" value="100" />
+		<property name="empName" value="Raju Kumar" />
+	</bean>
+	
+	<bean id="address1" class="dev.spring.demo.autowired.model.Address">
+		<property name="street" value="HSR Layout" />
+		<property name="city" value="Bangalore" />
+	</bean>
+	
+	<!-- uses of @Autowired on setter - end -->
+	
+	
+	
+	<!-- uses of @Autowired on properties - start -->
+	
+	<!-- Definition for Person Bean -->
+	<bean id="person" class="dev.spring.demo.autowired.model.Person">
+		<property name="name" value="Pinku" />
+	</bean>
+	
+	<!-- Above Address bean will be used with person bean -->
+	
+	<!-- uses of @Autowired on properties - end -->
+	
+	
+	
+	<!-- uses of @Autowired on constructor - start -->
+	
+	<!-- Definition for Person Bean -->
+	<bean id="student" class="dev.spring.demo.autowired.model.Student">
+		<property name="sid" value="101" />
+		<property name="name" value="Ankit" />
+	</bean>
+	
+	<!-- Above Address bean will be used with student bean -->
+	
+	<!-- uses of @Autowired on constructor - end -->
+	
+	
+	<!-- uses of @PostConstruct & @PreDestroy - start -->
+	
+	<!-- Definition for Greet Bean -->
+	<bean id="greet" class="dev.spring.demo.jsr.model.Greet">
+		<property name="message" value="Welcome to Spring IOC ! " />
+	</bean>
+	
+	<!-- uses of @PostConstruct & @PreDestroy - end -->
+
+</beans>

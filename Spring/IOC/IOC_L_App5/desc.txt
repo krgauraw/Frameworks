@@ -1,0 +1,6 @@
+IOC_L_App6:
+
+	Concept Covered:
+		Setting data in different ways for bean object:
+			1. Derived Data Type
+			2. Properties file

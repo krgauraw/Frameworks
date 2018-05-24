@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- services -->
+
+	<bean id="a1" class="dev.spring.core.Address">
+		<property name="houseNo" value="#102"></property>
+		<property name="streetName" value="BTM"></property>
+	</bean>
+
+	<!-- Commented because if more than one bin will be present and if autowire="byType" 
+		then framework will face ambiguity and throws UnsatisfiedDependencyException 
+		caused by NoUniqueBeanDefinitionException -->
+
+	<!-- <bean id="a2" class="dev.spring.core.Address"> 
+			<property name="houseNo" value="#123/M"></property> 
+			<property name="streetName" value="Electronic City Phase1"></property> 
+		</bean> 
+	-->
+
+	<!-- autowire="byType" demonstration. By Default autowire="no" -->
+	<bean id="empDetails" class="dev.spring.core.Employee" autowire="byType">	<!-- by default scope of bean object will be singleton -->
+		<property name="empId" value="000101" />
+		<property name="empName" value="Ankit Kumar" />
+
+	</bean>
+
+</beans>

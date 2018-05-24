@@ -1,0 +1,15 @@
+IOC_GS_App9:
+
+	1. PropertyPlaceholderConfigurer allows programmer to set property values from a properties file.
+	
+Steps:
+
+	1. Create a properties file and provide value in key-value pair. (Here application-config.properties).
+	2. Register PropertyPlaceholderConfigurer bean in spring configuration file and supply location of 
+	   properties file.
+	3. set values inside bean definition using ${key-of-properties-file} as value.
+	
+See:
+
+	1. application-config.properties
+	2. app-config.xml 

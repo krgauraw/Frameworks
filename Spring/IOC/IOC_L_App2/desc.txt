@@ -1,0 +1,6 @@
+IOC_L_App2:
+
+	Concept Covered:
+		1. Data Injection using Setter Injection
+		2. prototype scope of bean object 
+	

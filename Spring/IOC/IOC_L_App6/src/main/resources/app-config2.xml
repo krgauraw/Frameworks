@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--Demo of autowire="byName" -->
+
+	<bean id="empAdd" class="dev.spring.core.Address">
+		<property name="houseNo" value="#102"></property>
+		<property name="streetName" value="BTM"></property>
+	</bean>
+
+	<bean id="add" class="dev.spring.core.Address">
+		<property name="houseNo" value="#123/M"></property>
+		<property name="streetName" value="Electronic City Phase1"></property>
+	</bean>
+
+	<!-- autowire="byName" -->
+
+	<bean id="empDetails" class="dev.spring.core.Employee" autowire="byName">
+		<property name="empId" value="000101" />
+		<property name="empName" value="Ankit Kumar" />
+	</bean>
+
+	<bean id="empDetails1" class="dev.spring.core.Employee1" autowire="byName">
+		<property name="empId" value="000101" />
+		<property name="empName" value="Ankit Kumar" />
+	</bean>
+
+	<!-- Even though we have defined two beans for Address Class. Framework 
+		will pick only the bean id defined with attribute name i.e: empAdd -->
+
+</beans>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+    <bean id="e1" class="dev.spring.core.bean.Employee" lazy-init="true">
+    	<property name="empId" value="101"></property>
+    	<property name="empName" value="Gauraw"></property>
+    </bean>
+    
+    <bean id="e2" class="dev.spring.core.bean.Employee" lazy-init="true">
+    	<property name="empId" value="102"></property>
+    	<property name="empName" value="Vikash"></property>
+    </bean>
+    
+    
+    
+</beans>

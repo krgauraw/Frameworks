@@ -1,0 +1,39 @@
+IOC_L_App9:
+
+	Concept Covered:
+	
+			1. Java Based Configuration:
+			
+				Java-based configuration option enables us to write most of your Spring configuration without XML but with the
+				help of few Java-based annotations.
+			
+			2. Logging using Jakarta Commons Logging (JCL) API. (EmployeeDemoImpl.java)		
+
+
+Note:
+
+	1. @Configuration indicates that the class can be used by the Spring IoC container as a source of bean definitions.
+	2. @Bean annotation tells Spring that a method annotated with @Bean will return an object that should be registered 
+	   as a bean in the Spring application context.
+	3. @Import annotation allows for loading @Bean definitions from another configuration class.
+	
+		e.g:
+		
+			@Configuration
+			public class ConfigA {
+			   @Bean
+			   public A a() {
+			      return new A(); 
+			   }
+			}
+			
+			Uses of @Import:
+			
+			@Configuration
+			@Import(ConfigA.class)
+			public class ConfigB {
+			   @Bean
+			   public B a() {
+			      return new A(); 
+			   }
+			}

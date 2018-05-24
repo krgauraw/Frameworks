@@ -1,0 +1,3 @@
+IOC_G_App1:
+
+	Demonstration of loose coupling.
