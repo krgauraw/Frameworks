@@ -1,0 +1,19 @@
+HIB_G_App1:
+
+	1. Annotation based Hibernate Project.
+	2. Manually disabled 2nd level cache in app-config.xml
+	3. Detailed Explaination of hbm2ddl.auto property in app-config.xml
+	
+		Possible Values of hbm2ddl.auto:
+		
+										1. create
+										2. create-drop
+										3. update
+										4. validate
+	 
+	 It is advisable to use this property in development environment only. For Production env, We should remove this property from
+	 app-config.xml and should prepare a separate sql script for schema creation.
+	 
+	 4. Uses of Different Annotations like @Column, @Temporal, @Transiant.
+	 5. Auto Generation of Primary Key using @GeneratedValue annotation.
+	
