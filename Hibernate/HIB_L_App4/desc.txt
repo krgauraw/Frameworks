@@ -1,0 +1,5 @@
+HIB_L_App4:
+
+	HQL Demo Programs
+	
+	Detailed Comment has been given in each demo impl class.

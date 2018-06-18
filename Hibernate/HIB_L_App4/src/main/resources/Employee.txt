@@ -1,0 +1,6 @@
+1,ramu,btm,BE,25,40000
+2,gopi,btm,MCA,28,20000
+3,Pavan,marathalli,BE,36,30000
+4,kumar,btm,BE,25,44000
+5,swetha,btm,BE,21,45000
+6,swathi,marathalli,MCA,26,48000
