@@ -1,10 +1,10 @@
-package dev.hib.person.impl;
+package demo.hib.person.impl;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import dev.hib.person.pojo.Person;
+import demo.hib.person.pojo.Person;
 
 public class PersonImpl {
 	@SuppressWarnings("deprecation")

@@ -8,4 +8,14 @@ Concept Covered:
 				Impl Class Name: PersonImpl
 				hibernate mapping file Name: Person.hbm.xml
 				hibernate Configuration file name: hibernate.cfg.xml
+				
+				
+Steps to register local dependency for ojdbc6.jar:
+
+	1. Download ojdbc6.jar
+	2. Execute Below maven command:
+	
+		Command: mvn install:install-file -Dfile={filename_with_loaction}.jar -DgroupId={group_id} -DartifactId={artifact_id} -Dversion={version} -Dpackaging=jar
+		
+		e.g: mvn install:install-file -Dfile=/home/gauraw/Eclipse_WorkSpace/jar/ojdbc6.jar -DgroupId=com.oracle -DartifactId=ojdbc -Dversion=11.2.0 -Dpackaging=jar
 

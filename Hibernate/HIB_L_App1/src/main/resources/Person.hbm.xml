@@ -3,7 +3,7 @@
         "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
-<hibernate-mapping package="dev.hib.person.pojo">
+<hibernate-mapping package="demo.hib.person.pojo">
 	<class name="Person" table="PERSON">
 		<id name="fName" column="first_Name"></id>
 		<property name="lName" column="last_name"></property>

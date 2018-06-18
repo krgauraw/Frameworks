@@ -1,4 +1,4 @@
-package dev.hib.person.pojo;
+package demo.hib.person.pojo;
 
 /**
  * @author gauraw
