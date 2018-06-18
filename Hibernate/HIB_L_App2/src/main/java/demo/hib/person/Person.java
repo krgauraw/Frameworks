@@ -1,4 +1,4 @@
-package dev.person;
+package demo.hib.person;
 
 /**
  * @author gauraw

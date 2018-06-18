@@ -6,9 +6,9 @@
 	<session-factory>
 		<property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
 		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
-		<property name="hibernate.connection.username">hib_orcl</property>
-		<property name="hibernate.connection.password">gauraw</property>
-		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:ORCLSERVER</property>
+		<property name="hibernate.connection.username">hib_usr</property>
+		<property name="hibernate.connection.password">hib</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:XE</property>
 		<!-- <property name="hibernate.cache.use_query_cache">true</property> -->
 
 		<property name="hibernate.hbm2ddl.auto">create-drop</property>

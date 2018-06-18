@@ -1,4 +1,4 @@
-package dev.person;
+package demo.hib.book;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -8,24 +8,24 @@ import org.hibernate.cfg.Configuration;
  * @author gauraw
  *
  */
-public class PersonImpl {
+public class BookImpl {
 	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
-
-		Person p1 = new Person();
-		p1.setfName("Kumar");
-		p1.setlName("Gauraw");
-		p1.setAge(24);
+		Book b1 = new Book();
+		b1.setBookId(101);
+		b1.setBookTitle("Introduction to Java");
+		b1.setAuthorName("Kumar Gauraw");
+		b1.setPublishYear(2018);
 
 		Configuration c1 = new Configuration();
 		c1.configure("app-config.xml");
 		SessionFactory sf = c1.buildSessionFactory();
 		Session s1 = sf.openSession();
 		s1.beginTransaction();
-		String val = (String) s1.save(p1);
+		int val = (Integer) s1.save(b1);
 		s1.getTransaction().commit();
 		s1.flush();
 		s1.close();
-		System.out.println("Record Inserted Successfully  " + val);
+		System.out.println("Record Inserted Successfully : " + val);
 	}
 }

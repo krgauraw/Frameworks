@@ -1,3 +1,4 @@
 HIB_L_App2:
 	
 		Simple demonstration of Hibernate Framework using hbm mapping 
+		Hibernate Configuration File Name Changed from hibernate.cfg.xml to app-config.xml

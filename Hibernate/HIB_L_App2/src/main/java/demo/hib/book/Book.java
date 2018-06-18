@@ -1,4 +1,4 @@
-package dev.book;
+package demo.hib.book;
 
 /**
  * @author gauraw
